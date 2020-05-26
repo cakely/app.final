@@ -1,7 +1,14 @@
 # Notice
 
-This project includes code under the following license(s):
+The following files in this project include code under the Mozilla Public License Version 2.0 license:
 
+- dns.tf
+- error.html
+- main.tf
+- remote.tf
+- variables.tf
+
+___
 Mozilla Public License Version 2.0
 ==================================
 

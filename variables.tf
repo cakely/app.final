@@ -1,3 +1,5 @@
+# Licensed under the Mozilla Public License 2.0
+# See the included NOTICE in this project for license details
 variable "domain_example" {
 }
 
