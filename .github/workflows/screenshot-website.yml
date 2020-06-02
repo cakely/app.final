@@ -1,0 +1,28 @@
+name: Screenshot Website
+
+on:
+  pull_request:
+    branches:
+    - master
+
+jobs:
+  screenshot:
+    name: Screenshot Website
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        width: [1200, 992, 768, 600]
+    runs-on: ${{ matrix.os }}
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1.0.0
+
+    - name: Screenshot Homepage
+      uses: swinton/screenshot-website@v1.x
+      with:
+        source: ./index.html
+        destination: cakely.app-index-${{ matrix.os }}-${{ matrix.width }}.png
+        full-page: true
+        width: ${{ matrix.width }}
